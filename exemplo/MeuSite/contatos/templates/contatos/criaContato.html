@@ -1,16 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cria Contato</title>
     <link rel="stylesheet" href="{% static 'contatos/css/estilo.css' %}">
 </head>
 <body>
     {% include 'contatos/links.html' %}
     <h1>Cria um contato</h1>
-    <form action="" method="post" class="thDireita">
+    <form action="" method="POST" class="thDireita">
         <fieldset style="width: max-content;">
         <legend>Formulário de cadastro</legend>
         {% csrf_token %}
