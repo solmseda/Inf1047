@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cria Contato</title>
+    <title>{{ tituloPagina }}</title>
     <link rel="stylesheet" href="{% static 'contatos/css/estilo.css' %}">
 </head>
 <body>
     {% include 'contatos/links.html' %}
-    <h1>Cria um contato</h1>
+    <h1>{{ tituloPagina }}</h1>
     <form action="" method="POST" class="thDireita">
         <fieldset style="width: max-content;">
         <legend>Formulário de cadastro</legend>
@@ -15,7 +15,7 @@
         <table class='formulario'>
             {{ formulario.as_table }}
         </table>
-        <button type="submit">Cria contato</button>
+        <button type="submit">{{ textoBotao }}</button>
         </fieldset>
     </form>
 </body>

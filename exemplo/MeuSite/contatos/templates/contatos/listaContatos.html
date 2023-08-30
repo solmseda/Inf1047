@@ -11,11 +11,21 @@
     {% include 'contatos/links.html' %}
     <h1>Lista de Contatos</h1>
     <table>
-        <tr><th>Nome</th><th>Idade</th><th>Salário</th><th>Ações disponíveis</th></tr>
+        <tr><th>Nome</th>
+            <th>Idade</th>
+            <th>Salário</th>
+            <th>Telefone</th>
+            <th>Ações disponíveis</th>
+        </tr>
         {% for pessoa in pessoas %}
         <tr>
-            <td>{{ pessoa.nome }}</td><td>{{ pessoa.idade }}</td><td>{{ pessoa.salario }}</td>
-
+            <td><a href="{% url 'contatos:atualiza-contato' pk=pessoa.id %}">
+                {{ pessoa.nome }}</a>
+            </td>
+            <td>{{ pessoa.idade }}</td>
+            <td>{{ pessoa.salario }}</td>
+            <td>{{ pessoa.telefone }}</td>
+            <td><a href="{% url 'contatos:atualiza-contato' pk=pessoa.id %}">Atualizar</a></td>
         </tr>
         {% empty %}
             <tr><th colspan="5">Ainda não tem contatos cadastrados</th></tr>
