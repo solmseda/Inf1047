@@ -2,6 +2,10 @@
     font-size: 10px;
 }
 
+fieldset{
+    max-width: max-content;
+}
+
 .errorList {
     color: red;
     list-style-type: none;

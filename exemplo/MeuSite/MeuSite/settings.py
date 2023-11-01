@@ -132,3 +132,4 @@ STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'contatos/static'),
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
