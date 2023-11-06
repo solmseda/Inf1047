@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # incluidos
     "rest_framework",
     "carros",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = "MeuSite.urls"
@@ -105,6 +107,14 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
+]
+
+# Para permitir CORS
+CORS_ORIGIN_WHITELIST = [
+    'http://0.0.0.0:8080',
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    # Adicione outras origens permitidas, se necessário
 ]
 
 
